@@ -1,0 +1,21 @@
+# Core AI and LangChain libraries
+langchain
+langchain-google-genai
+langchain-community
+langchain-core
+
+# Vector store for our documents
+faiss-cpu
+
+# For loading environment variables (API keys)
+python-dotenv
+
+# For the Slack bot
+slack_bolt
+slack_sdk
+
+# For code syntax highlighting
+Pygments
+
+#for reading unstructured documents
+"unstructured[md]"
