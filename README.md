@@ -129,7 +129,7 @@ Invite the bot to a channel in your Slack workspace and start asking it question
 **2. Ask for a code explanation:**
 
 `@CodeQuest-Bot please explain this code snippet:`
-`  ```python `
-`def __init__(self, key):`
-`     self.key = key `
+`  ```python `</br>
+`def __init__(self, key):`</br>
+`     self.key = key `</br>
 ` ``` `
