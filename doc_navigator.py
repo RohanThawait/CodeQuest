@@ -8,7 +8,6 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains import create_retrieval_chain
 from langchain_community.document_loaders import DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-#from langchain_core.output_parsers import StrOutputParser
 
 # Load environment variables from .env file
 load_dotenv()
@@ -86,8 +85,6 @@ def create_rag_chain():
 
     return retrieval_chain
 
-
-# This block allows you to run the script directly for setup and testing
 if __name__ == '__main__':
     # First, create and save the vector store
     #create_vector_store()

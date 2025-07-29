@@ -32,7 +32,7 @@ except Exception as e:
     # Exit if chains fail to load, as the bot is non-functional
     exit()
 
-# --- Slack Event Handlers ---
+# event handler
 @app.event("app_mention")
 def handle_app_mention_events(body, say, logger):
     """
@@ -41,15 +41,13 @@ def handle_app_mention_events(body, say, logger):
     event = body["event"]
     message_text = event["text"]
     channel_id = event["channel"]
-    thread_ts = event.get("thread_ts", event["ts"]) # Reply in a thread
+    thread_ts = event.get("thread_ts", event["ts"])
 
     # Extract the user's actual query by removing the bot mention
-    # This is a simple way; a more robust solution might use regex
     user_query = message_text.split(">", 1)[-1].strip()
 
     # Routing logic: check for a code block
     if "```" in user_query:
-        # This is a code analysis request
         logger.info("Received a code analysis request.")
         say(text="Analyzing the code snippet... 🧠", thread_ts=thread_ts)
         
@@ -73,7 +71,6 @@ def handle_app_mention_events(body, say, logger):
             logger.error(f"Error during documentation lookup: {e}")
             say(text="Sorry, I encountered an error while searching the docs.", thread_ts=thread_ts)
 
-# --- Start the App ---
 if __name__ == "__main__":
     logging.info("Starting CodeQuest bot...")
     # SocketModeHandler is used for a secure connection without exposing a public URL

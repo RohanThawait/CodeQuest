@@ -56,7 +56,6 @@ def format_code_for_terminal(code, language):
         # Fallback if the language is not found or pygments fails
         return code
 
-# This block allows you to run the script directly for testing
 if __name__ == '__main__':
     # Create the analyzer chain
     #analyzer_chain = create_code_analyzer_chain()
