@@ -2,7 +2,7 @@
 
 CodeQuest is an AI-powered agent designed to streamline the onboarding process for software engineers. It integrates directly into Slack, answering questions about documentation and explaining complex code snippets to help new hires get up to speed faster.
 
-
+![Demo](slack-bot-new-n.gif)
 -----
 
 ## 🎯 The Problem
